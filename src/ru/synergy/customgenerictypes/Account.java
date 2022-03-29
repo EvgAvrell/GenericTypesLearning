@@ -1,6 +1,6 @@
 package ru.synergy.customgenerictypes;
 
-public class Account <T> {
+public class Account<T> implements Accountble<T>{
     private T id;
     private int sum;
 

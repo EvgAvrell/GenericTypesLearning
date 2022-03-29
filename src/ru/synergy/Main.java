@@ -1,12 +1,13 @@
 package ru.synergy;
 
+import java.util.ArrayList;
 import java.util.Scanner;
 
 public class Main {
 
     public static void main(String[] args) {
 	// write your code here
-        Object o = new Scanner(System.in);
+/*       Object o = new Scanner(System.in);
 
         Scanner scanner = null;
 
@@ -18,6 +19,29 @@ public class Main {
 
         Object o1 = new String();
 
-        Object o2 = new Integer(15);
+        Object o2 = new Integer(15);*/
+
+
+        Object[] objects = {10, "Привет", 3.14}; // автоупоковка
+
+        for(Object o : objects){
+            if(o instanceof String){
+                String s =(String) o;
+                System.out.println(s);
+            }
+        }
+
+
+        ArrayList numbers = new ArrayList(); // сохраняет обьекты
+        for(int i = 0; i< 10;i ++ ){ // сохранять в колекцию 10,20...100
+            numbers.add(i*10);
+            //numbers.add(i*10.4f);
+        }
+
+        int sum = 0;
+        for(Object o : numbers){
+            sum = sum + (Integer) o;
+        }
+        System.out.println(sum);
     }
 }
